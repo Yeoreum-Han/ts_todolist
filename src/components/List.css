@@ -1,0 +1,161 @@
+
+.checkedTodo {
+    font-style: italic;
+    text-decoration: line-through;
+    color: lightslategray;
+    animation: changeBg 3s ease-in-out 1;
+}
+
+.todoCover {
+    margin: 0 0 3% 0;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+
+.todoCover>div {
+    width: 100%;
+}
+
+.showCover,
+.editCover {
+    padding: 1% 0;
+    box-sizing: border-box;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 0.9em;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.showCover>input,
+.editCover>input {
+    cursor: pointer;
+    width: 3%;
+}
+
+.showCover>p {
+    margin: 0;
+    padding: 3% 0;
+    width: 85%;
+    height: 9vw;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.editCover>textarea {
+    background-color: transparent;
+    margin: 0;
+    padding: 3% 0;
+    box-sizing: border-box;
+    width: 85%;
+    height: 9vw;
+    text-align: center;
+    border: none;
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+.editCover>textarea:focus {
+    outline: none;
+}
+
+.todoCover>.buttonCover {
+    background-color: transparent;
+    margin: 0;
+    padding: 0 2% 0 0;
+    box-sizing: border-box;
+    width: 15%;
+}
+
+.todoCover>.buttonCover>button {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    border: none;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.buttonCover>button:nth-child(1) {
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.buttonCover>button:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width:575px) and (max-width:767px) {
+
+    .showCover,
+    .editCover {
+        font-size: 0.8em;
+        height: 7.5vw;
+    }
+
+    .todoCover>.buttonCover>button {
+        font-size: 1.1em;
+        font-weight: normal;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+
+    .showCover,
+    .editCover {
+        font-size: 0.8em;
+        height: 7vw;
+    }
+
+    .showCover>input,
+    .editCover>input {
+        width: 2%;
+    }
+
+    .showCover>p,
+    .editCover>textarea {
+        padding: 3.5% 0;
+        box-sizing: border-box;
+        height: 7vw;
+    }
+
+    .todoCover>.buttonCover>button {
+        font-size: 1em;
+        font-weight: normal;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .showCover,
+    .editCover {
+        font-size: 0.9em;
+        height: 6vw;
+    }
+
+    .showCover>input,
+    .editCover>input {
+        width: 2%;
+    }
+
+    .showCover>p,
+    .editCover>textarea {
+        padding: 4.5% 0;
+        box-sizing: border-box;
+        height: 7vw;
+    }
+
+    .todoCover>.buttonCover>button {
+        font-size: 1em;
+        font-weight: normal;
+    }
+}
