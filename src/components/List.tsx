@@ -3,6 +3,7 @@ import { Todo } from "../App";
 import { collection, onSnapshot, query, orderBy, updateDoc, doc, deleteDoc } from "firebase/firestore";
 import { db } from '../firebase';
 import './List.css';
+import { useAppSelector } from "../hooks";
 
 interface CurrentTodo {
     id: string;
@@ -15,6 +16,9 @@ export default function List() {
     const [currentTodo, setCurrentTodo] = useState<CurrentTodo | null>(null);
     //db의 todoList
     const [todoList, setTodoList] = useState<Todo[]>([]);
+
+    const clickedLocaleDate = useAppSelector((state) => state.date.localeDate);
+
 
     //todo를 받아오면서 currentTodo 상태업뎃
     function openEdit(todo: Todo) {
@@ -60,8 +64,9 @@ export default function List() {
                         isDone: docData.isDone,
                         createdAt: docData.createdAt,
                         text: docData.text,
+                        stringDay: docData.stringDay
                     };
-                });
+                }).filter((todo) => todo.stringDay === clickedLocaleDate);
                 setTodoList(updatedTodoList);
             });
         } catch (error) {
@@ -71,7 +76,7 @@ export default function List() {
 
     useEffect(() => {
         getData();
-    }, []);
+    }, [clickedLocaleDate]);
 
     return (
         <div className="todoListCover">
