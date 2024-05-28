@@ -5,7 +5,6 @@ import { db } from './firebase';
 import './App.css';
 import { useAppSelector } from './hooks';
 import SideCalendar from './components/SideCalendar';
-import 'react-calendar/dist/Calendar.css';
 
 export interface Todo {
   id: string;
@@ -19,8 +18,6 @@ function App() {
   const [userInput, setUserInput] = useState("");
   
   const clickedDay = useAppSelector((state) => state.date.day);
-  // const clickedDate = useAppSelector((state) => state.date.date);
-  // const clickedMonth = useAppSelector((state) => state.date.month);
   const clickedDate = useAppSelector((state) => state.date.localeDate);
 
   const week = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];

@@ -94,63 +94,96 @@
 }
 
 @media screen and (min-width:575px) and (max-width:767px) {
-
+    .todoCover{
+        margin: 0 auto 3% auto;
+    }
     .showCover,
     .editCover {
-        font-size: 0.8em;
-        height: 7.5vw;
+        padding: 0;
+        height: 5vw;
+        font-size: 0.7em;
+    }
+
+    .showCover>p{
+        padding: 0;
+        height: 5vw;
+        line-height: 5vw;
+    }
+    .editCover>textarea{
+        height: 5vw;
+        font-size: 1em;
+        padding: 0;
+        line-height: 5vw;
+    }
+
+    .showCover>input, .editCover>input{
+        width: 3.5%;
     }
 
     .todoCover>.buttonCover>button {
-        font-size: 1.1em;
+        font-size: 0.8em;
         font-weight: normal;
     }
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
-
+    .todoCover{
+        margin: 0 auto 3% auto;
+    }
     .showCover,
     .editCover {
-        font-size: 0.8em;
-        height: 7vw;
+        padding: 0;
+        height: 5vw;
+        font-size: 0.7em;
     }
 
-    .showCover>input,
-    .editCover>input {
-        width: 2%;
+    .showCover>p{
+        padding: 0;
+        height: 5vw;
+        line-height: 5vw;
+    }
+    .editCover>textarea{
+        height: 5vw;
+        font-size: 1em;
+        padding: 0;
+        line-height: 5vw;
     }
 
-    .showCover>p,
-    .editCover>textarea {
-        padding: 3.5% 0;
-        box-sizing: border-box;
-        height: 7vw;
+    .showCover>input, .editCover>input{
+        width: 2.5%;
     }
 
     .todoCover>.buttonCover>button {
-        font-size: 1em;
+        font-size: 0.8em;
         font-weight: normal;
     }
 }
 
 @media screen and (min-width:1024px) {
-
+    .todoCover{
+        margin: 0 auto 3% auto;
+    }
     .showCover,
     .editCover {
-        font-size: 0.9em;
-        height: 6vw;
+        padding: 0;
+        height: 4vw;
+        font-size: 0.8em;
     }
 
-    .showCover>input,
-    .editCover>input {
-        width: 2%;
+    .showCover>p{
+        padding: 0;
+        height: 4vw;
+        line-height: 4vw;
+    }
+    .editCover>textarea{
+        height: 4vw;
+        font-size: 1.2em;
+        padding: 0;
+        line-height: 4vw;
     }
 
-    .showCover>p,
-    .editCover>textarea {
-        padding: 4.5% 0;
-        box-sizing: border-box;
-        height: 7vw;
+    .showCover>input, .editCover>input{
+        width: 2.5%;
     }
 
     .todoCover>.buttonCover>button {

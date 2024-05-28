@@ -1,8 +1,8 @@
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
+import './SideCalendar.css';
 import { useState } from "react";
 import { useAppDispatch } from '../hooks';
-// import { saveFullDateNum } from "../store/dateSlice";
 import { setIsDateClicked } from "../store/clickSlice";
 import { saveDayNum, saveLocaleDate } from "../store/dateSlice";
 
@@ -14,7 +14,6 @@ export default function SideCalendar() {
     const dispatch = useAppDispatch();
 
     function clickDate(day: Date){
-        // dispatch(saveFullDateNum({day: day.getDay(), month: day.getMonth()+1, date: day.getDate()}))
         dispatch(saveDayNum(day.getDay()));
         dispatch(saveLocaleDate(day.toLocaleDateString()));
         dispatch(setIsDateClicked(true));
